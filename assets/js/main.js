@@ -211,11 +211,4 @@
   $(document).ready(function () {
     $(".venobox").venobox();
   });
-
-  // Initiate the datepicker plugin
-  $(document).ready(function () {
-    $(".datepicker").datepicker({
-      autoclose: true,
-    });
-  });
 })(jQuery);
