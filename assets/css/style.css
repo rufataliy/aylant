@@ -176,6 +176,7 @@ h6 {
 # Header
 --------------------------------------------------------------*/
 #header {
+  padding: 15px 0;
   background: var(--primary-bg-light);
   transition: all 0.5s;
   z-index: 997;
@@ -188,10 +189,9 @@ h6 {
 }
 
 #header .logo {
-  background: var(--primary-bg-dark);
-  padding: 15px 10px;
   font-size: 32px;
   margin: 0;
+  padding: 0;
   line-height: 1;
   font-weight: 700;
   letter-spacing: 0.5px;
@@ -227,6 +227,7 @@ h6 {
 
 .nav-menu > ul {
   display: flex;
+  align-items: center;
 }
 
 .nav-menu > ul > li {
