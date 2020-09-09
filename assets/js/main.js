@@ -150,7 +150,7 @@
   }
   // Toggle .header-scrolled class to #header when page is scrolled
   $(window).scroll(function () {
-    if ($(this).scrollTop() > 100) {
+    if ($(this).scrollTop() > 50) {
       $("#header").addClass("header-scrolled");
       $("#topbar").addClass("topbar-scrolled");
     } else {
@@ -159,13 +159,13 @@
     }
   });
 
-  if ($(window).scrollTop() > 100) {
+  if ($(window).scrollTop() > 50) {
     $("#header").addClass("header-scrolled");
     $("#topbar").addClass("topbar-scrolled");
   }
   // Back to top button
   $(window).scroll(function () {
-    if ($(this).scrollTop() > 100) {
+    if ($(this).scrollTop() > 50) {
       $(".back-to-top").fadeIn("slow");
     } else {
       $(".back-to-top").fadeOut("slow");
@@ -189,6 +189,24 @@
     time: 1000,
   });
 
+  $(".vendors-carousel").owlCarousel({
+    autoplay: false,
+    dots: false,
+    loop: true,
+    nav: true,
+    responsive: {
+      0: {
+        items: 3,
+      },
+      768: {
+        items: 3,
+      },
+      900: {
+        items: 3,
+      },
+    },
+  });
+
   // Slides carousel (uses the Owl Carousel library)
   $(".slides-carousel").owlCarousel({
     autoplay: true,
@@ -205,10 +223,5 @@
         items: 1,
       },
     },
-  });
-
-  // Initiate the venobox plugin
-  $(document).ready(function () {
-    $(".venobox").venobox();
   });
 })(jQuery);
